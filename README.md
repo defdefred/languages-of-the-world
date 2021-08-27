@@ -13,7 +13,230 @@ So why using:
 - this 4 letters code (26x26x26x26=456976)
 - and numerical range 000->999 ?
 
-A solution could be 1 byte written as hexadecimal number 00->FF.
+Let's convert the 4 letters code to pure numerical value:
+```
+2326;Adlm;166;Adlam;adlam;Adlam;9.0;2016-12-05
+3390;Afak;439;Afaka;afaka;;;2010-12-21
+4239;Aghb;239;Caucasian Albanian;aghbanien;Caucasian_Albanian;7.0;2014-11-15
+5108;Ahom;338;Ahom, Tai Ahom;âhom;Ahom;8.0;2015-07-07
+11493;Arab;160;Arabic;arabe;Arabic;1.1;2004-05-01
+11505;Aran;161;Arabic (Nastaliq variant);arabe (variante nastalique);;1.1;2014-11-15
+11812;Armi;124;Imperial Aramaic;araméen impérial;Imperial_Aramaic;5.2;2009-06-01
+11817;Armn;230;Armenian;arménien;Armenian;1.1;2004-05-01
+14683;Avst;134;Avestan;avestique;Avestan;5.2;2009-06-01
+17870;Bali;360;Balinese;balinais;Balinese;5.0;2006-10-10
+17908;Bamu;435;Bamum;bamoum;Bamum;5.2;2009-06-01
+18062;Bass;259;Bassa Vah;bassa;Bassa_Vah;7.0;2014-11-15
+18080;Batk;365;Batak;batik;Batak;6.0;2010-07-23
+20624;Beng;325;Bengali (Bangla);bengalî (bangla);Bengali;1.1;2016-12-05
+22586;Bhks;334;Bhaiksuki;bhaïksukî;Bhaiksuki;9.0;2016-12-05
+25238;Blis;550;Blissymbols;symboles Bliss;;;2004-05-01
+27444;Bopo;285;Bopomofo;bopomofo;Bopomofo;1.1;2004-05-01
+29075;Brah;300;Brahmi;brahma;Brahmi;6.0;2010-07-23
+29076;Brai;570;Braille;braille;Braille;3.0;2004-05-01
+31260;Bugi;367;Buginese;bouguis;Buginese;4.1;2006-06-21
+31281;Buhd;372;Buhid;bouhide;Buhid;3.2;2004-05-01
+35424;Cakm;349;Chakma;chakma;Chakma;6.1;2012-02-06
+35508;Cans;440;Unified Canadian Aboriginal Syllabics;syllabaire autochtone canadien unifié;Canadian_Aboriginal;3.0;2004-05-29
+35602;Cari;201;Carian;carien;Carian;5.1;2007-07-02
+39896;Cham;358;Cham;cham (čam, tcham);Cham;5.1;2009-11-11
+40005;Cher;445;Cherokee;tchérokî;Cherokee;3.0;2004-05-01
+40344;Chrs;109;Chorasmian;chorasmien;Chorasmian;13.0;2019-08-19
+41021;Cirt;291;Cirth;cirth;;;2004-05-01
+45025;Copt;204;Coptic;copte;Coptic;4.1;2006-06-21
+45617;Cpmn;402;Cypro-Minoan;syllabaire chypro-minoen;;;2017-07-26
+45753;Cprt;403;Cypriot syllabary;syllabaire chypriote;Cypriot;4.0;2017-07-26
+51829;Cyrl;220;Cyrillic;cyrillique;Cyrillic;1.1;2004-05-01
+51836;Cyrs;221;Cyrillic (Old Church Slavonic variant);cyrillique (variante slavonne);;1.1;2004-05-01
+55978;Deva;315;Devanagari (Nagari);dévanâgarî;Devanagari;1.1;2004-05-01
+58146;Diak;342;Dives Akuru;dives akuru;Dives_Akuru;13.0;2019-08-19
+62365;Dogr;328;Dogra;dogra;Dogra;11.0;2016-12-05
+65357;Dsrt;250;Deseret (Mormon);déseret (mormon);Deseret;3.1;2004-05-01
+66649;Dupl;755;Duployan shorthand, Duployan stenography;sténographie Duployé;Duployan;7.0;2014-11-15
+74987;Egyd;070;Egyptian demotic;démotique égyptien;;;2004-05-01
+74991;Egyh;060;Egyptian hieratic;hiératique égyptien;;5.2;2004-05-01
+74999;Egyp;050;Egyptian hieroglyphs;hiéroglyphes égyptiens;Egyptian_Hieroglyphs;5.2;2009-06-01
+77766;Elba;226;Elbasan;elbasan;Elbasan;7.0;2014-11-15
+78376;Elym;128;Elymaic;élymaïque;Elymaic;12.0;2018-08-26
+83338;Ethi;430;Ethiopic (Geʻez);éthiopien (geʻez, guèze);Ethiopic;3.0;2004-10-25
+108534;Geok;241;Khutsuri (Asomtavruli and Nuskhuri);khoutsouri (assomtavrouli et nouskhouri);Georgian;1.1;2012-10-16
+108541;Geor;240;Georgian (Mkhedruli and Mtavruli);géorgien (mkhédrouli et mtavrouli);Georgian;1.1;2016-12-05
+112898;Glag;225;Glagolitic;glagolitique;Glagolitic;4.1;2006-06-21
+115264;Gong;312;Gunjala Gondi;gunjala gondî;Gunjala_Gondi;11.0;2016-12-05
+115270;Gonm;313;Masaram Gondi;masaram gondî;Masaram_Gondi;10.0;2017-07-26
+115421;Goth;206;Gothic;gotique;Gothic;3.1;2004-05-01
+116961;Gran;343;Grantha;grantha;Grantha;7.0;2014-11-15
+117062;Grek;200;Greek;grec;Greek;1.1;2004-05-01
+119227;Gujr;320;Gujarati;goudjarâtî (gujrâtî);Gujarati;1.1;2004-05-01
+119438;Guru;310;Gurmukhi;gourmoukhî;Gurmukhi;1.1;2004-05-01
+123371;Hanb;503;Han with Bopomofo (alias for Han + Bopomofo);han avec bopomofo (alias pour han + bopomofo);;1.1;2016-01-19
+123376;Hang;286;Hangul (Hangŭl, Hangeul);hangûl (hangŭl, hangeul);Hangul;1.1;2004-05-29
+123378;Hani;500;Han (Hanzi, Kanji, Hanja);idéogrammes han (sinogrammes);Han;1.1;2009-02-23
+123384;Hano;371;Hanunoo (Hanunóo);hanounóo;Hanunoo;3.2;2004-05-29
+123388;Hans;501;Han (Simplified variant);idéogrammes han (variante simplifiée);;1.1;2004-05-29
+123389;Hant;502;Han (Traditional variant);idéogrammes han (variante traditionnelle);;1.1;2004-05-29
+123543;Hatr;127;Hatran;hatrénien;Hatran;8.0;2015-07-07
+125779;Hebr;125;Hebrew;hébreu;Hebrew;1.1;2004-05-01
+128882;Hira;410;Hiragana;hiragana;Hiragana;1.1;2004-05-01
+131010;Hluw;080;Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs);hiéroglyphes anatoliens (hiéroglyphes louvites, hiéroglyphes hittites);Anatolian_Hieroglyphs;8.0;2015-07-07
+131488;Hmng;450;Pahawh Hmong;pahawh hmong;Pahawh_Hmong;7.0;2014-11-15
+131497;Hmnp;451;Nyiakeng Puachue Hmong;nyiakeng puachue hmong;Nyiakeng_Puachue_Hmong;12.0;2017-07-26
+134803;Hrkt;412;Japanese syllabaries (alias for Hiragana + Katakana);syllabaires japonais (alias pour hiragana + katakana);Katakana_Or_Hiragana;1.1;2011-06-21
+136896;Hung;176;Old Hungarian (Hungarian Runic);runes hongroises (ancien hongrois);Old_Hungarian;8.0;2015-07-07
+149492;Inds;610;Indus (Harappan);indus;;;2004-05-01
+153463;Ital;210;Old Italic (Etruscan, Oscan, etc.);ancien italique (étrusque, osque, etc.);Old_Italic;3.1;2004-05-29
+158510;Jamo;284;Jamo (alias for Jamo subset of Hangul);jamo (alias pour le sous-ensemble jamo du hangûl);;1.1;2016-01-19
+158730;Java;361;Javanese;javanais;Javanese;5.2;2009-06-01
+168337;Jpan;413;Japanese (alias for Han + Hiragana + Katakana);japonais (alias pour han + hiragana + katakana);;1.1;2006-06-21
+172148;Jurc;510;Jurchen;jurchen;;;2010-12-21
+176054;Kali;357;Kayah Li;kayah li;Kayah_Li;5.1;2007-07-02
+176098;Kana;411;Katakana;katakana;Katakana;1.1;2004-05-01
+180509;Khar;305;Kharoshthi;kharochthî;Kharoshthi;4.1;2006-06-21
+180821;Khmr;355;Khmer;khmer;Khmer;3.0;2004-05-29
+180865;Khoj;322;Khojki;khojkî;Khojki;7.0;2014-11-15
+181673;Kitl;505;Khitan large script;grande écriture khitan;;;2015-07-15
+181680;Kits;288;Khitan small script;petite écriture khitan;Khitan_Small_Script;13.0;2015-07-15
+184626;Knda;345;Kannada;kannara (canara);Kannada;1.1;2004-05-29
+185670;Kore;287;Korean (alias for Hangul + Han);coréen (alias pour hangûl + han);;1.1;2007-06-13
+186015;Kpel;436;Kpelle;kpèllé;;;2010-03-26
+188794;Kthi;317;Kaithi;kaithî;Kaithi;5.2;2009-06-01
+193674;Lana;351;Tai Tham (Lanna);taï tham (lanna);Tai_Tham;5.2;2009-06-01
+193714;Laoo;356;Lao;laotien;Lao;1.1;2004-05-01
+193835;Latf;217;Latin (Fraktur variant);latin (variante brisée);;1.1;2004-05-01
+193836;Latg;216;Latin (Gaelic variant);latin (variante gaélique);;1.1;2004-05-01
+193843;Latn;215;Latin;latin;Latin;1.1;2004-05-01
+196304;Leke;364;Leke;léké;;;2015-07-07
+196432;Lepc;335;Lepcha (Róng);lepcha (róng);Lepcha;5.1;2007-07-02
+199057;Limb;336;Limbu;limbou;Limbu;4.0;2004-05-29
+199082;Lina;400;Linear A;linéaire A;Linear_A;7.0;2014-11-15
+199083;Linb;401;Linear B;linéaire B;Linear_B;4.0;2004-05-29
+199232;Lisu;399;Lisu (Fraser);lisu (Fraser);Lisu;5.2;2009-06-01
+203112;Loma;437;Loma;loma;;;2010-03-26
+209620;Lyci;202;Lycian;lycien;Lycian;5.1;2007-07-02
+209646;Lydi;116;Lydian;lydien;Lydian;5.1;2007-07-02
+211103;Mahj;314;Mahajani;mahâjanî;Mahajani;7.0;2014-11-15
+211172;Maka;366;Makasar;makassar;Makasar;11.0;2016-12-05
+211253;Mand;140;Mandaic, Mandaean;mandéen;Mandaic;6.0;2010-07-23
+211258;Mani;139;Manichaean;manichéen;Manichaean;7.0;2014-11-15
+211356;Marc;332;Marchen;marchen;Marchen;9.0;2016-12-05
+211536;Maya;090;Mayan hieroglyphs;hiéroglyphes mayas;;;2004-05-01
+213699;Medf;265;Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ);médéfaïdrine;Medefaidrin;11.0;2016-12-05
+213957;Mend;438;Mende Kikakui;mendé kikakui;Mende_Kikakui;7.0;2014-11-15
+214060;Merc;101;Meroitic Cursive;cursif méroïtique;Meroitic_Cursive;6.1;2012-02-06
+214072;Mero;100;Meroitic Hieroglyphs;hiéroglyphes méroïtiques;Meroitic_Hieroglyphs;6.1;2012-02-06
+218984;Mlym;347;Malayalam;malayâlam;Malayalam;1.1;2004-05-01
+220462;Modi;324;Modi, Moḍī;modî;Modi;7.0;2014-11-15
+220720;Mong;145;Mongolian;mongol;Mongolian;3.0;2004-05-01
+220753;Moon;218;Moon (Moon code, Moon script, Moon type);écriture Moon;;;2006-12-11
+222782;Mroo;264;Mro, Mru;mro;Mro;7.0;2016-12-05
+223868;Mtei;337;Meitei Mayek (Meithei, Meetei);meitei mayek;Meetei_Mayek;5.2;2009-06-01
+224737;Mult;323;Multani;multanî;Multani;8.0;2015-07-07
+227465;Mymr;350;Myanmar (Burmese);birman;Myanmar;3.0;2004-05-01
+228829;Nand;311;Nandinagari;nandinâgarî;Nandinagari;12.0;2018-08-26
+228931;Narb;106;Old North Arabian (Ancient North Arabian);nord-arabique;Old_North_Arabian;7.0;2014-11-15
+229183;Nbat;159;Nabataean;nabatéen;Nabataean;7.0;2014-11-15
+231764;Newa;333;Newa, Newar, Newari, Nepāla lipi;néwa, néwar, néwari, nepāla lipi;Newa;9.0;2016-12-05
+235327;Nkdb;085;Naxi Dongba (na²¹ɕi³³ to³³ba²¹, Nakhi Tomba);naxi dongba;;;2017-07-26
+235405;Nkgb;420;Naxi Geba (na²¹ɕi³³ gʌ²¹ba²¹, 'Na-'Khi ²Ggŏ-¹baw, Nakhi Geba);naxi geba, nakhi geba;;;2017-07-26
+235626;Nkoo;165;N’Ko;n’ko;Nko;5.0;2006-10-10
+240858;Nshu;499;Nüshu;nüshu;Nushu;10.0;2017-07-26
+250132;Ogam;212;Ogham;ogam;Ogham;3.0;2004-05-01
+253562;Olck;261;Ol Chiki (Ol Cemet’, Ol, Santali);ol tchiki;Ol_Chiki;5.1;2007-07-02
+257823;Orkh;175;Old Turkic, Orkhon Runic;orkhon;Old_Turkic;5.2;2009-06-01
+258180;Orya;327;Oriya (Odia);oriyâ (odia);Oriya;1.1;2016-12-05
+258392;Osge;219;Osage;osage;Osage;9.0;2016-12-05
+258544;Osma;260;Osmanya;osmanais;Osmanya;4.0;2004-05-01
+259757;Ougr;143;Old Uyghur;ancien ouïgour;;;2021-01-25
+263938;Palm;126;Palmyrene;palmyrénien;Palmyrene;7.0;2014-11-15
+264162;Pauc;263;Pau Cin Hau;paou chin haou;Pau_Cin_Hau;7.0;2014-11-15
+265525;Pcun;015;Proto-Cuneiform;proto-cunéiforme;;;2021-01-25
+266642;Pelm;016;Proto-Elamite;proto-élamite;;;2021-01-25
+266798;Perm;227;Old Permic;ancien permien;Old_Permic;7.0;2014-11-15
+268378;Phag;331;Phags-pa;’phags pa;Phags_Pa;5.0;2006-10-10
+268666;Phli;131;Inscriptional Pahlavi;pehlevi des inscriptions;Inscriptional_Pahlavi;5.2;2009-06-01
+268673;Phlp;132;Psalter Pahlavi;pehlevi des psautiers;Psalter_Pahlavi;7.0;2014-11-15
+268679;Phlv;133;Book Pahlavi;pehlevi des livres;;;2007-07-15
+268733;Phnx;115;Phoenician;phénicien;Phoenician;5.0;2006-10-10
+271521;Plrd;282;Miao (Pollard);miao (Pollard);Miao;6.1;2012-02-06
+269467;Piqd;293;Klingon (KLI pIqaD);klingon (pIqaD du KLI);;;2015-12-16
+275634;Prti;130;Inscriptional Parthian;parthe des inscriptions;Inscriptional_Parthian;5.2;2009-06-01
+276029;Psin;103;Proto-Sinaitic;proto-sinaïtique;;;2021-01-25
+281216;Qaaa;900;Reserved for private use (start);réservé à l’usage privé (début);;;2004-05-29
+281265;Qabx;949;Reserved for private use (end);réservé à l’usage privé (fin);;;2004-05-29
+299139;Ranj;303;Ranjana;ranjana;;;2021-01-25
+305220;Rjng;363;Rejang (Redjang, Kaganga);redjang (kaganga);Rejang;5.1;2009-02-23
+308444;Rohg;167;Hanifi Rohingya;hanifi rohingya;Hanifi_Rohingya;11.0;2017-11-21
+308712;Roro;620;Rongorongo;rongorongo;;;2004-05-01
+312667;Runr;211;Runic;runique;Runic;3.0;2004-05-01
+316697;Samr;123;Samaritan;samaritain;Samaritan;5.2;2009-06-01
+316810;Sara;292;Sarati;sarati;;;2004-05-29
+316811;Sarb;105;Old South Arabian;sud-arabique, himyarite;Old_South_Arabian;5.2;2009-06-01
+316905;Saur;344;Saurashtra;saurachtra;Saurashtra;5.1;2007-07-02
+320784;Sgnw;095;SignWriting;SignÉcriture, SignWriting;SignWriting;8.0;2015-07-07
+321122;Shaw;281;Shavian (Shaw);shavien (Shaw);Shavian;4.0;2004-05-01
+321545;Shrd;319;Sharada, Śāradā;charada, shard;Sharada;6.1;2012-02-06
+321628;Shui;530;Shuishu;shuishu;;;2017-07-26
+321857;Sidd;302;Siddham, Siddhaṃ, Siddhamātṛkā;siddham;Siddham;7.0;2014-11-15
+322117;Sind;318;Khudawadi, Sindhi;khoudawadî, sindhî;Khudawadi;7.0;2014-11-15
+322121;Sinh;348;Sinhala;singhalais;Sinhala;3.0;2004-05-01
+325991;Sogd;141;Sogdian;sogdien;Sogdian;11.0;2017-11-21
+326002;Sogo;142;Old Sogdian;ancien sogdien;Old_Sogdian;11.0;2017-11-21
+326274;Sora;398;Sora Sompeng;sora sompeng;Sora_Sompeng;6.1;2012-02-06
+326470;Soyo;329;Soyombo;soyombo;Soyombo;10.0;2017-07-26
+330229;Sund;362;Sundanese;sundanais;Sundanese;5.1;2007-07-02
+332892;Sylo;316;Syloti Nagri;sylotî nâgrî;Syloti_Nagri;4.1;2006-06-21
+333036;Syrc;135;Syriac;syriaque;Syriac;3.0;2004-05-01
+333038;Syre;138;Syriac (Estrangelo variant);syriaque (variante estranghélo);;3.0;2004-05-01
+333043;Syrj;137;Syriac (Western variant);syriaque (variante occidentale);;3.0;2004-05-01
+333047;Syrn;136;Syriac (Eastern variant);syriaque (variante orientale);;3.0;2004-05-01
+334101;Tagb;373;Tagbanwa;tagbanoua;Tagbanwa;3.2;2004-05-01
+334221;Takr;321;Takri, Ṭākrī, Ṭāṅkrī;tâkrî;Takri;6.1;2012-02-06
+334234;Tale;353;Tai Le;taï-le;Tai_Le;4.0;2004-10-25
+334250;Talu;354;New Tai Lue;nouveau taï-lue;New_Tai_Lue;4.1;2006-06-21
+334267;Taml;346;Tamil;tamoul;Tamil;1.1;2004-05-01
+334288;Tang;520;Tangut;tangoute;Tangut;9.0;2016-12-05
+334509;Tavt;359;Tai Viet;taï viêt;Tai_Viet;5.2;2009-06-01
+336954;Telu;340;Telugu;télougou;Telugu;1.1;2004-05-01
+336992;Teng;290;Tengwar;tengwar;;;2004-05-01
+337668;Tfng;120;Tifinagh (Berber);tifinagh (berbère);Tifinagh;4.1;2006-06-21
+338292;Tglg;370;Tagalog (Baybayin, Alibata);tagal (baybayin, alibata);Tagalog;3.2;2009-02-23
+338676;Thaa;170;Thaana;thâna;Thaana;3.0;2004-05-01
+338684;Thai;352;Thai;thaï;Thai;1.1;2004-05-01
+339397;Tibt;330;Tibetan;tibétain;Tibetan;2.0;2004-05-01
+339801;Tirh;326;Tirhuta;tirhouta;Tirhuta;7.0;2014-11-15
+343200;Tnsa;275;Tangsa;tangsa;;;2021-02-17
+343916;Toto;294;Toto;toto;;;2020-04-16
+355593;Ugar;040;Ugaritic;ougaritique;Ugaritic;4.0;2004-05-01
+369312;Vaii;470;Vai;vaï;Vai;5.1;2007-07-02
+374987;Visp;280;Visible Speech;parole visible;;;2004-05-01
+375005;Vith;228;Vithkuqi;vithkuqi;;;2021-02-17
+387114;Wara;262;Warang Citi (Varang Kshiti);warang citi;Warang_Citi;7.0;2014-11-15
+388220;Wcho;283;Wancho;wantcho;Wancho;12.0;2017-07-26
+396426;Wole;480;Woleai;woléaï;;;2010-12-21
+414506;Xpeo;030;Old Persian;cunéiforme persépolitain;Old_Persian;4.1;2006-06-21
+416959;Xsux;020;Cuneiform, Sumero-Akkadian;cunéiforme suméro-akkadien;Cuneiform;5.0;2006-10-10
+425186;Yezi;192;Yezidi;yézidi;Yezidi;13.0;2019-08-19
+427448;Yiii;460;Yi;yi;Yi;3.0;2004-05-01
+439739;Zanb;339;Zanabazar Square (Zanabazarin Dörböljin Useg, Xewtee Dörböljin Bicig, Horizontal Square Script);zanabazar quadratique;Zanabazar_Square;10.0;2017-07-26
+445153;Zinh;994;Code for inherited script;codet pour écriture héritée;Inherited;;2009-02-23
+448013;Zmth;995;Mathematical notation;notation mathématique;;3.2;2007-11-26
+452196;Zsye;993;Symbols (Emoji variant);symboles (variante émoji);;6.0;2015-12-16
+452204;Zsym;996;Symbols;symboles;;1.1;2007-11-26
+455569;Zxxx;997;Code for unwritten documents;codet pour les documents non écrits;;;2011-06-21
+456272;Zyyy;998;Code for undetermined script;codet pour écriture indéterminée;Common;;2004-05-29
+456975;Zzzz;999;Code for uncoded script;codet pour écriture non codée;Unknown;;2006-10-10
+```
+The code used is:
+```
+cat iso15924.txt | while IFS=\; read CODE NUM TXT ; do
+        A1=$(printf '%d' "'$(echo $CODE |cut -c 1)")
+        A2=$(printf '%d' "'$(echo $CODE |cut -c 2)")
+        A3=$(printf '%d' "'$(echo $CODE |cut -c 3)")
+        A4=$(printf '%d' "'$(echo $CODE |cut -c 4)")
+        VAL=$(echo "($A1 - 65) * ( 26*26*26 ) + ( $A2 - 97 ) * ( 26 * 26 ) + ( $A3 - 97 ) *  26 + ( $A4 - 97 )" | bc)
+        echo "$VAL;$CODE;$NUM;$TXT"
+done
+```
 ## spoken language
 ISO 639-3 tells us that there is 7893 codes to covers all referenced languages.
 
