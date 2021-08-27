@@ -29,8 +29,14 @@ cat iso15924.txt | while IFS=\; read CODE NUM TXT ; do
 done
 ```
 We need 3 bytes to covert all spoken languages, with huge space remaining...
+
 Maybe using the numerical code that fit in 2 bytes with huge space remaining is better...
 
+Latin alphabet is 217, so:
+```
+expr 0 \* 256 + 217
+217
+```
 ## Spoken languages
 ISO 639-3 tells us that there is 7893 codes to covers all referenced languages.
 
@@ -61,4 +67,5 @@ We need 2 bytes to covert all spoken language, with huge space remaining...
 English is 3048, so:
 ```
 expr 11 \* 256 + 232
+3048
 ```
