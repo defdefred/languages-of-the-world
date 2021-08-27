@@ -1,5 +1,5 @@
-# languages of the world
-## written langage
+# Languages of the world
+## Written langages
 ISO 15924 tells us that there is only 210 codes to covers all writing systems.
 
 https://unicode.org/iso15924/iso15924.txt
@@ -14,6 +14,7 @@ So why using:
 - and numerical range 000->999 ?
 
 Let's convert the 4 letters code to pure numerical value:
+
 https://github.com/defdefred/languages-of-the-world/blob/main/iso15924.csv
 
 The code used is:
@@ -27,7 +28,10 @@ cat iso15924.txt | while IFS=\; read CODE NUM TXT ; do
         echo "$VAL;$CODE;$NUM;$TXT"
 done
 ```
-## spoken language
+We need 3 bytes to covert all spoken languages, with huge space remaining...
+Maybe using the numerical code that fit in 2 bytes with huge space remaining is better...
+
+## Spoken languages
 ISO 639-3 tells us that there is 7893 codes to covers all referenced languages.
 
 https://iso639-3.sil.org/code_tables/download_tables#Complete%20Code%20Tables
@@ -39,5 +43,17 @@ A full byte is enough for all most used language and another optional byte is mo
 
 So why using a 3 letters code (26x26x26=17576)
 
-A solution could be 2 bytes written as hexadecimal number 0000->FFFF.
+Let's convert the 3 letters code to full numerical value:
 
+https://github.com/defdefred/languages-of-the-world/blob/main/iso639-3.csv
+The code used is:
+```
+cat iso639-3.txt | while read CODE rest ; do
+        A2=$(printf '%d' "'$(echo $CODE |cut -c 1)")
+        A3=$(printf '%d' "'$(echo $CODE |cut -c 2)")
+        A4=$(printf '%d' "'$(echo $CODE |cut -c 3)")
+        VAL=$(echo "( $A2 - 97 ) * ( 26 * 26 ) + ( $A3 - 97 ) *  26 + ( $A4 - 97 )" | bc)
+        echo "$VAL;$CODE;$rest"
+done
+```
+We need 2 bytes to covert all spoken language, with huge space remaining...
