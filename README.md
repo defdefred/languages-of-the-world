@@ -57,3 +57,8 @@ cat iso639-3.txt | while read CODE rest ; do
 done
 ```
 We need 2 bytes to covert all spoken language, with huge space remaining...
+
+English is 3048, so:
+```
+expr 11 \* 256 + 232
+```
