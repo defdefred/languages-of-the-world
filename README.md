@@ -2,7 +2,7 @@
 ## Written langages
 ISO 15924 tells us that there is only 210 codes to covers all writing systems.
 
-https://unicode.org/iso15924/iso15924.txt
+https://unicode.org/iso15924/iso15924-codes.html
 ```
 $ wc -l iso15924.txt
 210 iso15924.txt
@@ -32,10 +32,12 @@ We need 3 bytes to covert all spoken languages, with huge space remaining...
 
 Maybe using the numerical code that fit in 2 bytes with huge space remaining is better...
 
-Latin alphabet is 217, so:
+https://unicode.org/iso15924/iso15924-num.html
+
+Latin alphabet is 215, so:
 ```
-expr 0 \* 256 + 217
-217
+expr 0 \* 256 + 215
+215
 ```
 ## Spoken languages
 ISO 639-3 tells us that there is 7893 codes to covers all referenced languages.
