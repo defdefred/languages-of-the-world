@@ -54,6 +54,7 @@ So why using a 3 letters code (26x26x26=17576)
 Let's convert the 3 letters code to full numerical value:
 
 https://github.com/defdefred/languages-of-the-world/blob/main/iso639-3.csv
+
 The code used is:
 ```
 cat iso639-3.txt | while read CODE rest ; do
