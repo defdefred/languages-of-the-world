@@ -1,5 +1,5 @@
 # Languages of the world
-## Written langages
+## Written languages
 ISO 15924 tells us that there is only 210 codes to covers all writing systems.
 
 https://unicode.org/iso15924/iso15924-codes.html
